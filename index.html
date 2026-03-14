@@ -1,0 +1,42 @@
+ <!-- 
+ Author: Rafael Grebogi
+ Date created: 14/03/2026
+ Last modified: --
+ Modified by: --
+  -->
+
+
+
+<!DOCTYPE html>  <!-- Select modern HTML -->
+<html>
+<head>
+  <title>MyFleet Coding Exercise</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Fleet Overview</h1>
+
+  <!-- Display fleet summary information -->
+  <h2>Summary</h2>
+  <p id="total_km"></p>  <!-- Total fleet kilometers travelled -->
+  <ul id="division_summary"></ul> <!-- List showing total kilometers travelled per division-->
+
+  <!-- Table showing all fleet -->
+   <!-- Attributes included: Rego, Division, Kilometers -->
+  <h2>Vehicles</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Registration</th>
+        <th>Division</th>
+        <th>Kilometres</th>
+      </tr>
+    </thead>
+    <tbody id="vehicle_table"></tbody>
+  </table>
+
+  <!-- Script and Data files -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
