@@ -46,6 +46,10 @@ Give me a minimal CSS style for a table and headings to make a basic HTML page l
 
 In a real project, this stylesheet would typically be replaced by or integrated with the client's existing UI styling standards.
 
+## Page Sketch
+
+The file `PageSketch.png` contains the initial sketch used to outline the structure of the page before implementation.
+
 ## Running the project
 
 Simply open `index.html` in a browser.
