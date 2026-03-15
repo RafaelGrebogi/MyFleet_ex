@@ -1,7 +1,14 @@
 // Author: Rafael Grebogi
 // Date created: 14/03/2026
-// Last modified: 14/03/2026
+// Last modified: 15/03/2026
 // Modified by: Rafael Grebogi
+/*
+Description:
+Main script for the fleet overview page.
+Loads the vehicle dataset, populates the table in the UI,
+and computes summary information including total fleet distance
+and kilometres travelled per division.
+*/
 
 const tableBody = document.getElementById("vehicle_table"); 
 
