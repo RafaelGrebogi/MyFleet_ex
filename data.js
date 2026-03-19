@@ -26,12 +26,12 @@ const vehicles = [
   // Utes
   { registration: "UTE101", division: "Utes", km: 28750 },
   { registration: "UTE202", division: "Utes", km: 19320 },
-  { registration: "UTE303", division: "Utes", km: 22110 },
+  { registration: "UTE303", division: "Utes", km: 0 },
 
   // Luxury
   { registration: "LUX111", division: "Luxury", km: 9400 },
   { registration: "LUX222", division: "Luxury", km: 12650 },
-  { registration: "LUX333", division: "Luxury", km: 15890 },
+  { registration: "LUX333", division: "Luxury", km: 0 },
 
   // Service Vehicles
   { registration: "SRV501", division: "Service Vehicles", km: 18100 },

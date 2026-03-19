@@ -1,8 +1,8 @@
  <!-- 
  Author: Rafael Grebogi
  Date created: 14/03/2026
- Last modified: --
- Modified by: --
+ Last modified: 19/03/2026
+ Modified by: Rafael Grebogi
   -->
 
 
@@ -21,9 +21,21 @@
   <p id="total_km"></p>  <!-- Total fleet kilometers travelled -->
   <ul id="division_summary"></ul> <!-- List showing total kilometers travelled per division-->
 
+  <!-- Filter to apply on the table -->
+<div id="filter_div">
+  <label> Filter: Greater than <input type="number" id="filterValue_input" name="filter_input"></label>
+</div>
+<div id="fbutton_div">
+  <button id="btn_filter">Apply filter</button>
+</div>
+<div id="sbutton_div">
+  <button id="btn_sort">Sort</button>
+</div>
+
+
   <!-- Table showing all fleet -->
    <!-- Attributes included: Rego, Division, Kilometers -->
-  <h2>Vehicles</h2>
+  <h2>Vehicles</h2> 
   <table border="1">
     <thead>
       <tr>
@@ -38,5 +50,6 @@
   <!-- Script and Data files -->
   <script src="data.js"></script>
   <script src="script.js"></script>
+  <script src="tests.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 // Author: Rafael Grebogi
 // Date created: 14/03/2026
-// Last modified: 15/03/2026
+// Last modified: 19/03/2026
 // Modified by: Rafael Grebogi
 /*
 Description:
@@ -15,13 +15,19 @@ const tableBody = document.getElementById("vehicle_table");
 const totalKmElement = document.getElementById("total_km");
 
 const divisionSummary = document.getElementById("division_summary");
-const divisionTotals = {};
 
+
+document.getElementById("btn_filter").addEventListener("click",renderPage);
+document.getElementById("btn_sort").addEventListener("click",sortData);
 
 //--------------------------------------------------------------
 // Looping through all vehicles in the dataset (data.js)
 // and inserting them in "vehicle_table".
 // Formatting distance using "toLocaleString()". Example: XXX,XXX Km
+
+function renderElements(vehicles){
+
+  tableBody.innerHTML = "";
 
 vehicles.forEach(vehicle => {
   const row = `
@@ -58,6 +64,10 @@ totalKmElement.textContent =
 // and inserting each division total kilometers in 'Summary'.
 // Formatting distance using "toLocaleString()". Example: XXX,XXX Km
 
+divisionSummary.innerHTML = "";
+const divisionTotals = {};
+
+
 // Looping through all vehicles
 vehicles.forEach(vehicle => {
   if (!divisionTotals[vehicle.division]) {
@@ -76,4 +86,37 @@ for (const division in divisionTotals) {
 
 }
 
+};
+
+
+function applyFilterGreaterThan(vehiclesList,filterValue){
+
+  return vehiclesList.filter(vehicle => vehicle.km >= filterValue);
+};
+
+
+
+function sortData(){
+
+  const vehiclesCopy = [...vehicles];
+
+  vehiclesCopy.sort((a,b) => a.km-b.km);
+  renderElements(vehiclesCopy);
+
+};
+
+
+
+function renderPage(){
+  const filter_value = Number(document.getElementById("filterValue_input").value);
+  const vehiclesList = applyFilterGreaterThan(vehicles,filter_value);
+
+  renderElements(vehiclesList);
+};
+
+
 //--------------------------------------------------------------
+//--------------------------------------------------------------
+
+
+renderPage();
